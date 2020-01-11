@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoWithCheckbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jc6-IQ-iDy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskCell" rowHeight="53" id="Q07-NM-YBy" customClass="TaskTableViewCell" customModule="ToDoWithCheckbox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q07-NM-YBy" id="M6S-dh-m7u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-Vp-I2r">
+                                                    <rect key="frame" x="15" y="11.5" width="30" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="6Rl-j2-apE"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Eba-q1-Cfb"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="circle" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="checkBoxAction:" destination="Q07-NM-YBy" eventType="touchUpInside" id="VY9-Cb-K5K"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-qv-TuG">
+                                                    <rect key="frame" x="53" y="16" width="307" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qyh-qv-TuG" firstAttribute="trailing" secondItem="M6S-dh-m7u" secondAttribute="trailingMargin" id="0k2-4E-x9B"/>
+                                                <constraint firstItem="iLb-Vp-I2r" firstAttribute="leading" secondItem="M6S-dh-m7u" secondAttribute="leadingMargin" id="5N8-QM-AAW"/>
+                                                <constraint firstItem="Qyh-qv-TuG" firstAttribute="top" secondItem="M6S-dh-m7u" secondAttribute="topMargin" constant="5" id="5UX-0d-8hd"/>
+                                                <constraint firstItem="iLb-Vp-I2r" firstAttribute="top" secondItem="M6S-dh-m7u" secondAttribute="topMargin" id="FvY-0d-uv1"/>
+                                                <constraint firstItem="Qyh-qv-TuG" firstAttribute="leading" secondItem="iLb-Vp-I2r" secondAttribute="trailing" constant="8" id="Nwe-VB-4VJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkBoxOutlet" destination="iLb-Vp-I2r" id="ex8-q8-v97"/>
+                                            <outlet property="taskNameLabel" destination="Qyh-qv-TuG" id="ege-If-j6P"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gsk-G5-m6i"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nge-UZ-ud9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jc6-IQ-iDy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2ca-Bo-Kw2"/>
+                            <constraint firstItem="jc6-IQ-iDy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z4r-MH-MKW"/>
+                            <constraint firstItem="jc6-IQ-iDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mV0-gS-f0V"/>
+                            <constraint firstItem="jc6-IQ-iDy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="muU-fi-Tlp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

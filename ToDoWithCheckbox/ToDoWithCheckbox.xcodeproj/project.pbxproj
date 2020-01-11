@@ -13,6 +13,7 @@
 		F3FD8A4B23CA4739009367E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FD8A4923CA4739009367E6 /* Main.storyboard */; };
 		F3FD8A4D23CA473B009367E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3FD8A4C23CA473B009367E6 /* Assets.xcassets */; };
 		F3FD8A5023CA473B009367E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FD8A4E23CA473B009367E6 /* LaunchScreen.storyboard */; };
+		F3FD8A5823CA488C009367E6 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD8A5723CA488C009367E6 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F3FD8A4C23CA473B009367E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3FD8A4F23CA473B009367E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3FD8A5123CA473B009367E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FD8A5723CA488C009367E6 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F3FD8A4323CA4739009367E6 /* AppDelegate.swift */,
 				F3FD8A4523CA4739009367E6 /* SceneDelegate.swift */,
 				F3FD8A4723CA4739009367E6 /* ViewController.swift */,
+				F3FD8A5723CA488C009367E6 /* TaskTableViewCell.swift */,
 				F3FD8A4923CA4739009367E6 /* Main.storyboard */,
 				F3FD8A4C23CA473B009367E6 /* Assets.xcassets */,
 				F3FD8A4E23CA473B009367E6 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FD8A5823CA488C009367E6 /* TaskTableViewCell.swift in Sources */,
 				F3FD8A4823CA4739009367E6 /* ViewController.swift in Sources */,
 				F3FD8A4423CA4739009367E6 /* AppDelegate.swift in Sources */,
 				F3FD8A4623CA4739009367E6 /* SceneDelegate.swift in Sources */,
