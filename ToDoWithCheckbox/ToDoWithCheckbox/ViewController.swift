@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddTask {
+    
+    
     
 
     var tasks: [Task] = []
@@ -33,6 +35,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         return cell
+    }
+    
+    func addTask(name: String) {
+        tasks.append(Task(name: name))
     }
     
 }
