@@ -12,4 +12,8 @@ class Task {
     var name = ""
     var status = false
     
+    convenience init(name: String) {
+        self.init()
+        self.name = name
+    }
 }
