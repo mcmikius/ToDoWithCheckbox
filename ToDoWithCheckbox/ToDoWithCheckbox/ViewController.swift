@@ -53,7 +53,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func changeButton(checked: Bool, index: Int) {
-        <#code#>
+        tasks[index].checked = checked
+        tableView.reloadData()
     }
     
 }
