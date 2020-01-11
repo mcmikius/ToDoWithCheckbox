@@ -17,6 +17,7 @@
 		F3FD8A5A23CA4B0C009367E6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD8A5923CA4B0C009367E6 /* Task.swift */; };
 		F3FD8A5C23CA50AE009367E6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD8A5B23CA50AE009367E6 /* AddTaskViewController.swift */; };
 		F3FD8A5E23CA5162009367E6 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD8A5D23CA5162009367E6 /* AddTask.swift */; };
+		F3FD8A6023CA54C4009367E6 /* ChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD8A5F23CA54C4009367E6 /* ChangeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F3FD8A5923CA4B0C009367E6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F3FD8A5B23CA50AE009367E6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		F3FD8A5D23CA5162009367E6 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		F3FD8A5F23CA54C4009367E6 /* ChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				F3FD8A5723CA488C009367E6 /* TaskTableViewCell.swift */,
 				F3FD8A5B23CA50AE009367E6 /* AddTaskViewController.swift */,
 				F3FD8A5D23CA5162009367E6 /* AddTask.swift */,
+				F3FD8A5F23CA54C4009367E6 /* ChangeButton.swift */,
 				F3FD8A4923CA4739009367E6 /* Main.storyboard */,
 				F3FD8A4C23CA473B009367E6 /* Assets.xcassets */,
 				F3FD8A4E23CA473B009367E6 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				F3FD8A4423CA4739009367E6 /* AppDelegate.swift in Sources */,
 				F3FD8A5E23CA5162009367E6 /* AddTask.swift in Sources */,
 				F3FD8A4623CA4739009367E6 /* SceneDelegate.swift in Sources */,
+				F3FD8A6023CA54C4009367E6 /* ChangeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

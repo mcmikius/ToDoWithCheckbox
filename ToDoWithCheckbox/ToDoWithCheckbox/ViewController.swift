@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddTask {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddTask, ChangeButton {
     
     
     
@@ -35,6 +35,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.checkBoxOutlet.setBackgroundImage(UIImage.init(systemName: "circle"), for: .normal)
         }
         
+        cell.delegate = self
+        cell.indexP = indexPath.row
+        cell.tasks = tasks
+        
         return cell
     }
     
@@ -46,6 +50,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func addTask(name: String) {
         tasks.append(Task(name: name))
         tableView.reloadData()
+    }
+    
+    func changeButton(checked: Bool, index: Int) {
+        <#code#>
     }
     
 }
