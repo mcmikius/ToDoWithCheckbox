@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tasks.append(Task(name: "test"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,6 +24,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
+        
+        cell.taskNameLabel.text = tasks[indexPath.row].name
+        if tasks[indexPath.row].checked {
+            cell.checkBoxOutlet.setBackgroundImage(UIImage.init(systemName: "checkmark.circle.fill"), for: .normal)
+        } else {
+            cell.checkBoxOutlet.setBackgroundImage(UIImage.init(systemName: "circle"), for: .normal)
+        }
         
         return cell
     }

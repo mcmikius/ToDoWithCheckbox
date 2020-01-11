@@ -10,7 +10,7 @@ import Foundation
 
 class Task {
     var name = ""
-    var status = false
+    var checked = false
     
     convenience init(name: String) {
         self.init()

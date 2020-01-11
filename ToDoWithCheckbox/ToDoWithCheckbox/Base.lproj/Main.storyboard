@@ -32,7 +32,8 @@
                                                         <constraint firstAttribute="height" constant="30" id="6Rl-j2-apE"/>
                                                         <constraint firstAttribute="width" constant="30" id="Eba-q1-Cfb"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="circle" catalog="system"/>
+                                                    <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" backgroundImage="checkmark.circle.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="checkBoxAction:" destination="Q07-NM-YBy" eventType="touchUpInside" id="VY9-Cb-K5K"/>
                                                     </connections>
@@ -80,6 +81,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle" catalog="system" width="64" height="60"/>
+        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
