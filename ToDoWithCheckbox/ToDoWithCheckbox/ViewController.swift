@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var tasks: [Task] = []
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tasks.append(Task(name: "test"))
@@ -37,8 +38,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! AddTaskViewController
+        vc.delegate = self
+    }
+    
     func addTask(name: String) {
         tasks.append(Task(name: name))
+        tableView.reloadData()
     }
     
 }

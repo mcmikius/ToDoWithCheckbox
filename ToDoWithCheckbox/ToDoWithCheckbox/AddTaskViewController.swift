@@ -17,6 +17,7 @@ class AddTaskViewController: UIViewController {
     @IBAction func addAction(_ sender: Any) {
         if taskNameLabel.text != "" {
             delegate?.addTask(name: taskNameLabel.text!)
+            navigationController?.popViewController(animated: true)
         }
     }
     
